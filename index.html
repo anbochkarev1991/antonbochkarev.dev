@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anton Bochkarev | Senior Headless Commerce Developer (Next.js, Shopify, Contentstack)</title>
+  <meta name="description" content="Senior frontend engineer for headless commerce storefronts. Next.js, Shopify, Contentstack. Core Web Vitals, WCAG accessibility, SEO and AI-search. Remote, UTC-3.">
+  <meta name="author" content="Anton Bochkarev">
+  <link rel="canonical" href="https://antonbochkarev.dev/">
+
+  <meta property="og:title" content="Anton Bochkarev | Senior Headless Commerce Developer">
+  <meta property="og:description" content="Senior frontend engineer building high-performance headless storefronts with Next.js, Shopify, and Contentstack. Performance, accessibility, SEO and AI-search.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://antonbochkarev.dev/">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Anton Bochkarev | Senior Headless Commerce Developer">
+  <meta name="twitter:description" content="Senior frontend engineer for headless commerce storefronts. Next.js, Shopify, Contentstack. Core Web Vitals, WCAG accessibility, SEO and AI-search.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Anton Bochkarev",
+      "jobTitle": "Senior Full-Stack Engineer",
+      "description": "Senior frontend engineer building high-performance headless commerce storefronts with Next.js, Shopify, and Contentstack. Focused on Core Web Vitals, WCAG 2.1 AA accessibility, technical SEO, and AI-search readiness.",
+      "url": "https://antonbochkarev.dev",
+      "email": "a.n.bochkarev1991@gmail.com",
+      "sameAs": [
+        "https://linkedin.com/in/anbochkarev",
+        "https://github.com/anbochkarev1991"
+      ],
+      "knowsAbout": [
+        "Headless Commerce", "Next.js", "React", "Shopify", "Contentstack",
+        "TypeScript", "GraphQL", "Core Web Vitals", "WCAG 2.1 AA Accessibility",
+        "Technical SEO", "AI-Search Optimization", "llms.txt"
+      ],
+      "workLocation": {
+        "@type": "Place",
+        "name": "Argentina (Remote, UTC-3)"
+      }
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #fafafa;
+      --bg-card: #ffffff;
+      --text: #111;
+      --text-2: #555;
+      --text-3: #999;
+      --accent: #2563eb;
+      --green: #059669;
+      --green-bg: #ecfdf5;
+      --border: #e5e5e5;
+      --r: 10px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #09090b;
+        --bg-card: #131316;
+        --text: #ececef;
+        --text-2: #a1a1aa;
+        --text-3: #5a5a65;
+        --accent: #3b82f6;
+        --green: #34d399;
+        --green-bg: #052e1c;
+        --border: #222228;
+      }
+    }
+
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ────────── Hero ────────── */
+
+    .hero {
+      background: #09090b;
+      color: #fafafa;
+      padding: 4.5rem 0 3.5rem;
+    }
+
+    .wrap {
+      max-width: 660px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: #a1a1aa;
+      border: 1px solid #27272a;
+      border-radius: 100px;
+      padding: 0.35rem 0.9rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .badge .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #34d399;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.25rem, 5.5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+    }
+
+    .hero h1 .accent {
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero .lead {
+      margin-top: 1.5rem;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #a1a1aa;
+      max-width: 580px;
+    }
+
+    .hero .tech-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    .hero .chip {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #d4d4d8;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 0.3rem 0.75rem;
+      border-radius: 6px;
+    }
+
+    /* ────────── Sections ────────── */
+
+    .main { max-width: 660px; margin: 0 auto; padding: 0 1.5rem; }
+
+    section { padding: 2.25rem 0; }
+    section + section { border-top: 1px solid var(--border); }
+
+    .sh { display: flex; flex-direction: column; gap: 0.15rem; margin-bottom: 1.25rem; }
+    .sh h2 { font-size: 1.2rem; font-weight: 700; letter-spacing: -0.02em; }
+    .sh p { font-size: 0.9rem; color: var(--text-2); margin: 0; }
+
+    h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-top: 1.75rem;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    .body-text {
+      font-size: 0.92rem;
+      color: var(--text-2);
+      line-height: 1.7;
+      margin-bottom: 0.75rem;
+    }
+
+    /* ────────── Case study card ────────── */
+
+    .case-card {
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      overflow: hidden;
+      margin-bottom: 0.5rem;
+    }
+
+    .case-card-top {
+      background: var(--bg-card);
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .case-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .case-card-top p {
+      font-size: 0.9rem;
+      color: var(--text-2);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .case-card-bottom {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: var(--border);
+      gap: 1px;
+    }
+
+    .stat {
+      background: var(--bg-card);
+      padding: 1rem 1.25rem;
+      text-align: center;
+    }
+
+    .stat .val {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--green);
+      line-height: 1.2;
+    }
+
+    .stat .lbl {
+      font-size: 0.72rem;
+      color: var(--text-2);
+      margin-top: 0.2rem;
+      line-height: 1.35;
+    }
+
+    /* ────────── Inline metrics ────────── */
+
+    .inline-metrics {
+      display: grid;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      overflow: hidden;
+      margin: 0.75rem 0;
+    }
+
+    .inline-metrics.cols-2 { grid-template-columns: 1fr 1fr; }
+    .inline-metrics.cols-1 { grid-template-columns: 1fr; }
+
+    .im {
+      background: var(--bg-card);
+      padding: 0.9rem 1.25rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+
+    .im .v {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--green);
+      white-space: nowrap;
+    }
+
+    .im .l {
+      font-size: 0.82rem;
+      color: var(--text-2);
+      line-height: 1.4;
+    }
+
+    /* ────────── Small details ────────── */
+
+    .note {
+      font-size: 0.82rem;
+      color: var(--text-3);
+      margin-top: 0.35rem;
+    }
+
+    /* ────────── Tech pills ────────── */
+
+    .pills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+    .pill {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.85rem;
+      border-radius: 6px;
+    }
+
+    /* ────────── Services ────────── */
+
+    .services { list-style: none; display: grid; gap: 0; }
+
+    .svc {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.93rem;
+      color: var(--text);
+    }
+
+    .svc:last-child { border-bottom: none; }
+
+    .svc::before {
+      content: "";
+      flex-shrink: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+      background: var(--green);
+    }
+
+    /* ────────── Contact ────────── */
+
+    .contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .cl-item {
+      display: flex;
+      align-items: center;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cl-item:last-child { border-bottom: none; }
+
+    .cl-label {
+      width: 5.5rem;
+      flex-shrink: 0;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-3);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .cl-value {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .cl-value a { color: var(--text); }
+    .cl-value a:hover { color: var(--accent); text-decoration: none; }
+
+    /* ────────── Footer ────────── */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.75rem 0;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-3);
+    }
+
+    /* ────────── Responsive ────────── */
+
+    @media (max-width: 600px) {
+      .hero { padding: 3rem 0 2.5rem; }
+      .hero h1 { font-size: 1.85rem; }
+      .hero .lead { font-size: 0.95rem; margin-top: 1.25rem; }
+      .hero .tech-row { margin-top: 1.5rem; gap: 0.4rem; }
+      .hero .chip { font-size: 0.72rem; padding: 0.25rem 0.6rem; }
+      .badge { font-size: 0.72rem; padding: 0.3rem 0.75rem; margin-bottom: 1.25rem; }
+
+      .wrap, .main { padding: 0 1.25rem; }
+      section { padding: 1.75rem 0; }
+      .sh { margin-bottom: 1rem; }
+      .sh h2 { font-size: 1.1rem; }
+
+      h3 { margin-top: 1.5rem; font-size: 0.9rem; }
+      .body-text { font-size: 0.88rem; }
+
+      .case-card-top { padding: 1rem 1.15rem; }
+      .case-card-top p { font-size: 0.85rem; }
+      .case-label { font-size: 0.65rem; }
+      .case-card-bottom { grid-template-columns: 1fr 1fr; }
+      .stat { padding: 0.85rem 0.75rem; }
+      .stat .val { font-size: 1.2rem; }
+      .stat .lbl { font-size: 0.68rem; }
+
+      .im { flex-direction: column; gap: 0.15rem; padding: 0.75rem 1rem; }
+      .im .v { font-size: 1rem; }
+      .im .l { font-size: 0.78rem; }
+
+      .pill { font-size: 0.8rem; padding: 0.35rem 0.75rem; }
+      .svc { font-size: 0.88rem; padding: 0.7rem 0; }
+
+      .cl-label { width: 4.5rem; font-size: 0.75rem; }
+      .cl-value { font-size: 0.88rem; }
+
+      footer { padding: 1.75rem 0; }
+    }
+
+    @media (max-width: 380px) {
+      .hero h1 { font-size: 1.6rem; }
+      .case-card-bottom { grid-template-columns: 1fr 1fr; }
+      .stat .val { font-size: 1.1rem; }
+      .inline-metrics.cols-2 { grid-template-columns: 1fr; }
+      .cl-label { width: 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="badge"><span class="dot"></span> Available for contract work</div>
+      <h1>Anton Bochkarev.<br><span class="accent">Headless Commerce Engineer.</span></h1>
+      <p class="lead">Senior frontend engineer for high-performance, SEO-strong headless commerce storefronts. I build and optimize storefront frontends with Next.js, Shopify, and Contentstack, with a focus on performance, accessibility, SEO and AI-search readiness.</p>
+      <div class="tech-row">
+        <span class="chip">Next.js</span>
+        <span class="chip">Shopify</span>
+        <span class="chip">Contentstack</span>
+        <span class="chip">Core Web Vitals</span>
+        <span class="chip">WCAG 2.1 AA</span>
+        <span class="chip">AI-Search / llms.txt</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="main">
+
+    <!-- Case Study -->
+    <section>
+      <div class="sh">
+        <h2>Case Study</h2>
+        <p>A real engagement, real numbers.</p>
+      </div>
+
+      <div class="case-card">
+        <div class="case-card-top">
+          <div class="case-label">Vuori Activewear / ~1.36M organic sessions per month</div>
+          <p>Senior engineer on the Vuori storefront via Kake, May 2023 to present. Frontend-focused across React and Next.js, with Contentstack and Shopify integrations, performance, accessibility, and SEO/AI-search.</p>
+        </div>
+        <div class="case-card-bottom">
+          <div class="stat">
+            <div class="val">+36%</div>
+            <div class="lbl">Organic purchases</div>
+          </div>
+          <div class="stat">
+            <div class="val">+242%</div>
+            <div class="lbl">ChatGPT sessions</div>
+          </div>
+          <div class="stat">
+            <div class="val">+114%</div>
+            <div class="lbl">ChatGPT purchases</div>
+          </div>
+          <div class="stat">
+            <div class="val">+50%</div>
+            <div class="lbl">Int'l organic</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>SEO and AI-Search</h3>
+      <p class="body-text">Built the hreflang and llms.txt layers of a broader SEO/AI-search effort. Organic conversion 3.8% to 4.3%. ChatGPT-referred sessions grew from 5.0K to 17.2K per month.</p>
+
+      <h3>PLP Video Feature</h3>
+      <p class="body-text">Primary of two engineers on the React front-end. Shipped lifestyle video on product listing cards with no load-time regression.</p>
+      <div class="inline-metrics cols-1">
+        <div class="im">
+          <span class="v">3-8% to 5-11%</span>
+          <span class="l">PLP-to-purchase conversion across five products in the first two weeks</span>
+        </div>
+      </div>
+
+      <h3>Accessibility</h3>
+      <p class="body-text">Shipped WCAG 2.1 AA fixes including dynamic alt text from Shopify metafields, keyboard operability, and carousel focus-trap.</p>
+      <div class="inline-metrics cols-2">
+        <div class="im">
+          <span class="v">73 to 83</span>
+          <span class="l">Lighthouse a11y, mobile</span>
+        </div>
+        <div class="im">
+          <span class="v">68 to 75</span>
+          <span class="l">Lighthouse a11y, desktop</span>
+        </div>
+      </div>
+
+      <h3>Headless Migration and Performance</h3>
+      <p class="body-text">Worked on the migration from Shopify to a custom Next.js (SSR) storefront. Contributions included bundle-size reduction, lazy loading, image optimization, and SSR improvements.</p>
+
+      <h3>Integrations</h3>
+      <p class="body-text">3 years building and consuming GraphQL across markets. Contentstack CMS, Shopify, Klaviyo, Medallia, Reviews.io, Google Maps.</p>
+    </section>
+
+    <!-- Tech Stack -->
+    <section>
+      <div class="sh">
+        <h2>Tech Stack</h2>
+      </div>
+      <div class="pills">
+        <span class="pill">React</span>
+        <span class="pill">Next.js</span>
+        <span class="pill">TypeScript</span>
+        <span class="pill">GraphQL</span>
+        <span class="pill">Node.js</span>
+        <span class="pill">NestJS</span>
+        <span class="pill">PostgreSQL</span>
+        <span class="pill">Shopify</span>
+        <span class="pill">Contentstack</span>
+        <span class="pill">Jest / RTL</span>
+        <span class="pill">AI-native workflow</span>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section>
+      <div class="sh">
+        <h2>How I Can Help</h2>
+      </div>
+      <ul class="services">
+        <li class="svc">Headless storefront frontend build and optimization</li>
+        <li class="svc">Core Web Vitals and performance</li>
+        <li class="svc">Accessibility (WCAG 2.1 AA)</li>
+        <li class="svc">Technical SEO and AI-search / llms.txt readiness</li>
+        <li class="svc">CMS and commerce integrations</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <div class="sh">
+        <h2>Get in Touch</h2>
+        <p>Argentina (Remote, UTC-3). English C1.</p>
+      </div>
+      <ul class="contact-list">
+        <li class="cl-item">
+          <span class="cl-label">Email</span>
+          <span class="cl-value"><a href="mailto:a.n.bochkarev1991@gmail.com">a.n.bochkarev1991@gmail.com</a></span>
+        </li>
+        <li class="cl-item">
+          <span class="cl-label">LinkedIn</span>
+          <span class="cl-value"><a href="https://linkedin.com/in/anbochkarev" target="_blank" rel="noopener">linkedin.com/in/anbochkarev</a></span>
+        </li>
+        <li class="cl-item">
+          <span class="cl-label">GitHub</span>
+          <span class="cl-value"><a href="https://github.com/anbochkarev1991" target="_blank" rel="noopener">github.com/anbochkarev1991</a></span>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="wrap">&copy; 2026 Anton Bochkarev</div>
+  </footer>
+
+</body>
+</html>
