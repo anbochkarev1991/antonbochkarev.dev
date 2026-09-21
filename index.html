@@ -337,6 +337,42 @@
       background: var(--highlight);
     }
 
+    /* ────────── Project card ────────── */
+
+    .project-card {
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.15rem 1.35rem;
+      background: var(--bg-card);
+    }
+
+    .project-card .project-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
+
+    .project-card .project-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .project-card .project-desc {
+      font-size: 0.85rem;
+      color: var(--text-2);
+      line-height: 1.65;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card .project-link {
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+
     /* ────────── Contact ────────── */
 
     .contact-list {
@@ -438,6 +474,7 @@
       <div class="badge"><span class="dot"></span> Available for contract work</div>
       <h1>Anton Bochkarev.<br><span class="accent">Headless Commerce Engineer.</span></h1>
       <p class="lead">Senior frontend engineer for high-performance, SEO-strong headless commerce storefronts. I build and optimize storefront frontends with Next.js, Shopify, and Contentstack, with a focus on performance, accessibility, SEO and AI-search readiness.</p>
+      <p class="lead" style="margin-top: 0.75rem; font-size: 0.88rem; color: #71717a;">6+ years as a full-stack engineer across React, Next.js, TypeScript, and Node, including roles at Deloitte and Dektry before the Vuori storefront.</p>
       <div class="tech-row">
         <span class="chip">Next.js</span>
         <span class="chip">Shopify</span>
@@ -547,6 +584,19 @@
         <li class="svc">Technical SEO and AI-search / llms.txt readiness</li>
         <li class="svc">CMS and commerce integrations</li>
       </ul>
+    </section>
+
+    <!-- Selected Project -->
+    <section>
+      <div class="sh">
+        <h2>Selected Project</h2>
+      </div>
+      <div class="project-card">
+        <div class="project-label">AI-native full-stack build</div>
+        <div class="project-title">AI Code Review: multi-agent PR analysis platform</div>
+        <p class="project-desc">Designed, built, and shipped an AI system where four specialized LLM agents (security, performance, architecture, code quality) review pull requests in parallel and produce deterministic risk scores and merge recommendations. Built with Next.js 16 / React 19, NestJS, Supabase/PostgreSQL with RLS, and OpenAI, plus Stripe billing, per-agent token budgets and cost tracking, and partial-failure resilience.</p>
+        <a class="project-link" href="https://github.com/anbochkarev1991/ai-code-review" target="_blank" rel="noopener">github.com/anbochkarev1991/ai-code-review</a>
+      </div>
     </section>
 
     <!-- Contact -->
