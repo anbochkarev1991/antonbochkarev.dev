@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://antonbochkarev.dev/sitemap.xml
+Sitemap: https://anbochkarev1991.github.io/antonbochkarev.dev/sitemap.xml
